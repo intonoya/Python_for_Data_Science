@@ -14,7 +14,7 @@ def ft_zoom():
             or path.endswith('.jpg')):
         raise AssertionError("The file has a wrong format!")
     elif path is None or path == "" or not os.path.exists(path):
-            raise AssertionError("The image does not exist!")
+        raise AssertionError("The image does not exist!")
     ft_load(path)
     image = Image.open(path)
     grayscale_image = image.convert('L')

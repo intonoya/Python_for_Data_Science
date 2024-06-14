@@ -62,7 +62,7 @@ def slice_me(family: list, start: int, end: int) -> list:
     for i in family:
         if not all(isinstance(j, (int, float)) for j in i):
             try:
-                raise AssertionError("You can only provide an array of numbers!")
+                raise AssertionError("You can only provide numbers!")
             except AssertionError as e:
                 return e
     family = np.array(family)
